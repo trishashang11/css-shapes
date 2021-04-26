@@ -1,0 +1,27 @@
+.shapes{
+    text-align: center;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 0;
+        height: 0;
+        width: 158px;
+        border-bottom: 148px solid blue;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 170px;
+        height: 150px;
+        background-color: red;
+        top: 60px;
+        left: 300px;
+    }
+}
+
