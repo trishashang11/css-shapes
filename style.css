@@ -1,24 +1,120 @@
 .shapes {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px;
+}
+
+.trapezoid {
+  width: 140px;
+  height: 0;
+  border-bottom: 110px solid darkblue;
+  border-left: 56px solid transparent;
+  border-right: 56px solid transparent;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.heart::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 50%;
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  content: '';
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 50%;
+  top: 0;
+  right: -50px;
+}
+
+.star {
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellow;
+  border-left: 100px solid transparent;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
   position: relative;
 }
-.shapes::before {
-  content: "";
-  position: absolute;
-  top: 60px;
-  left: 0;
+
+.star::before {
+  content: '';
   height: 0;
-  width: 158px;
-  border-bottom: 148px solid blue;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-}
-.shapes::after {
-  content: "";
+  width: 0;
+  border-bottom: 80px solid yellow;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
   position: absolute;
-  width: 170px;
-  height: 150px;
-  background-color: red;
-  top: 60px;
-  left: 300px;
-}/*# sourceMappingURL=style.css.map */
+  top: -45px;
+  left: -65px;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.star::after {
+  position: absolute;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellow;
+  border-left: 100px solid transparent;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  content: '';
+}
+
+.diamond {
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 100px solid maroon;
+  position: relative;
+  top: -45px;
+}
+
+.diamond::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 100px solid maroon;
+  top: 100px;
+  left: -75px;
+  position: absolute;
+}
+
+.egg {
+  width: 126px;
+  height: 180px;
+  background-color: green;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+/*# sourceMappingURL=style.css.map */
